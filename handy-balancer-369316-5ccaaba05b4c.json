@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "handy-balancer-369316",
+  "private_key_id": "5ccaaba05b4c5ec46525b3cb1b472bffb92bd166",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCrxXiYQ1slRxBi\n/a1biknwSipKZm/5HDMAyrHAvFeC61cXgkkUqtHMQbpgZdlnxMo66o7+CNKXhpQG\nfBKo7lwIfnTC7KZNL0d3TlmblFjeRgUD42K8Zs3ehaabdIS3UWFIPrFKNRUYjWjd\nJS9riVlshp5Mg9RS69gAoDHcfCz0mSRkCRKF2AL3oRECUQ1sK/ciUlp/4kxYbSKf\noFW3DEqnWxXCE5jr1FGYzj6GkAl/jNrJI9v6wslyEpieJ5a3J45yZS19PWEReoSS\nOay1/9kAkmoGKs031ZK3wOL8FYdevPDy/Pm2aS6SuXOG8C4SG1IABGclmVBKDYaI\nfszz+MFjAgMBAAECggEAFdoAsz9lAciDuqbH3iHTsc2q30fJzdh7BTTunkoMyJsK\nEMkND/ktHagXlCTQyUUnxDf2VIsoczNLyHQR5vYFCjrqvVNf/T4Fquqc4VBiv8q2\nNPOWf3OFPrN6Pu4jO145xc2H6JyjyuROZ0z64S9vYKwoHiwVH4QLjgTTDa1UW2dG\n0lXwyGzpFxLYofvHtXbSUbcZEt8htTZhN0fdngfzKWJ9mvWRkS7AanN38Wp5rmin\nnnAtpKTJ3nRIYZHaSAu7Nz5/G8oDoR0CVa73GF7g6ZSK8eCBVcSmnNb5CcvU5b2G\n4+dztfzezre8Qudp3hbjDwPVLLx3f9f+wKIM4k+BHQKBgQDvrwXwft4sto7ClZiY\nLFEFAvR3gRB1uNsg+rD+L7c7IIYlTDEN18kkAz9rvTkaPzHHsb+hodalZp6Yj9JB\nPBj9Rz/satLSEooc6XHgbFIx9LEMdpyBmtGKnBvrkhN6bR373YEUrCXvQw12AtP1\niIKHUxy/XCG+9UovKNtnEZ0lBQKBgQC3du/4A/dHEruxr8jrselKxj2IyE95YSXR\nBD+iwt5wHKqq+DIBECJc87iU3dP55QAmBMjs4xNLpym/jCdZ76guNuja6jqNbQp9\nvGxKgmSURrGWG6xkDpuB5eQh12Lms9u+8PwRVc1APBxielHm2Cuko5La9hlMbYW7\nbLw6cI4ZRwKBgHdCLgFhDulOmLAHQVsOSe3lb4B6zpbUuOuq8SA428Hmx/iM9ad+\npA1wNEFGcMA3i2xibAhff27jJayheyuMXJ7BsfPPn0B5ixEhstDI9Qj4SJP7/Jmc\nUADY9id7koeK/a1RpKWFloZ7ZZo/g/max9/PofExRXU/lX7rpGefYwKFAoGAcQ/3\nKt0m0sIUsZgnNjlaEB7DZTws3hykdX8syF1XP7gq5Vo3VrhetPHt2rAqJmKeCNAC\nExqNlZ3a+JSi26X5+yETt3WJyAZe5MXt5q0c1tQKNPuw7aii5RaL1N8rsAk/bxiL\n/xLlfqSMyZOgTacCnl+/7Pik9pi4RZzpEwqyR5kCgYEA1VRRuTYaCLJAn/PTk7wb\nZ7FRJRlPTrJTK0Y/Z98MQ/ErS38TL0zTzEMv7OFmnapvE4v47GKS1ht3ApHA7F41\n7m5n1DNwpjAWHYtxybckRZAVIBQWEA+1ivunGzmIrIqj7lS7SDDHOs54O8qt5dwX\nRPrQ1SCNDJmsERES7XFogCE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "soham-414@handy-balancer-369316.iam.gserviceaccount.com",
+  "client_id": "108437042686869341062",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/soham-414%40handy-balancer-369316.iam.gserviceaccount.com"
+}
