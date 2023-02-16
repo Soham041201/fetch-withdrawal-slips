@@ -1,0 +1,5 @@
+date = ["Date", "date", "DATE", "Dated","dated", "DATED"]
+amount = [ "Rs", "₹", "INR","Rs.","Rupees"]
+account = ["Account", "account", "ACCOUNT","A/c"]
+number = ["Number", "number", "NUMBER", "no", "NO"]
+signature = ["Signature","signature"]

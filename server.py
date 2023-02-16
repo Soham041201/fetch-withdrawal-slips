@@ -6,38 +6,45 @@ app = Flask(__name__)
 
 
 @app.route('/')
-# ‘/’ URL is bound with hello_world() function.
 def hello_world():
+    root_dir = '/Users/sohamsattigeri/Soham/College/EDI/fetch-withdrawal-slips/test_images'
+    # date, ammount, acc_number, logo = get_data('/Users/sohamsattigeri/Soham/College/EDI/fetch-withdrawal-slips/test_images/9.jpg')
+    for subdir, dirs, files in os.walk(root_dir):
+        for file in files:
+            file_path = os.path.join(subdir, file)
+            print(file_path)
+            date, ammount, acc_number, logo = get_data(file_path)
+            print(file_path)
+            print(date, ammount, acc_number)
+            from csv import writer
+            # try:
+            # fDate = int(''.join(filter(str.isdigit, date)))
+            # date = fDate
+            # except:
+            # date = '-'
+            try:
+                fAmmount = int(''.join(filter(str.isdigit, ammount)))
+                ammount = fAmmount
+            except:
+                ammount = '-'
+            try:
+                fAcc = int(''.join(filter(str.isdigit, acc_number)))
+                acc_number = fAcc
+            except:
+                acc_number = '-'
 
-    res = requests.get("https://imgs.search.brave.com/gV1lY-KnhVa-vQjqB6VH6O5A2k67Dh_B28jRTYk-ues/rs:fit:1200:720:1/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS80/QndkZlVUbVJ3TS9t/YXhyZXNkZWZhdWx0/LmpwZw", stream=True)
-    file_name = "test.jpg"
-    if res.status_code == 200:
-        with open(file_name, 'wb') as f:
-            shutil.copyfileobj(res.raw, f)
-            print('Image sucessfully Downloaded: ', file_name)
-    else:
-        print('Image Couldn\'t be retrieved')
-
-    date, ammount, acc_number = get_data(file_name)
-
-    return jsonify({'date': date, 'ammount': ammount, 'acc_number': acc_number})
-
-
-@app.route('/add', methods=['POST'])
-def get_data_from_image():
-    dataDict = request.get_json()
-    link = dataDict['image_link']
-    res = requests.get(link, stream=True)
-    file_name = "test.jpg"
-    if res.status_code == 200:
-        with open(file_name, 'wb') as f:
-            shutil.copyfileobj(res.raw, f)
-            print('Image sucessfully Downloaded: ', file_name)
-    else:
-        print('Image Couldn\'t be retrieved')
-    date, ammount, acc_number = get_data(file_name)
+            List = [date, ammount, acc_number, logo]
+            with open('result.csv', 'a') as f_object:
+                writer_object = writer(f_object)
+                writer_object.writerow(List)
+            f_object.close()
+    df = pd.read_csv("result.csv", header=None)
+    df = df.rename(columns={0: "Date", 1: "Ammount",
+                   2: "Account Number", 3: "Logo"})
+    df.to_csv("result.csv", index=False)
+    f_object.close()
     return jsonify({'date': date, 'ammount': ammount, 'acc_number': acc_number})
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=8080)
