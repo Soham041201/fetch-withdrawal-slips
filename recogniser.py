@@ -21,6 +21,10 @@ def extract_date():
     # response = client.text_detection(image=image)
 
     with io.open('pre-process.jpg', 'rb') as image:
+        # img1 = np.array(Image.open(image))
+        # text = pytesseract.image_to_string(img1,nice=0, lang='eng', config='--psm 6')
+        # print("Text from OCR")
+        # print(text)
         content = image.read()
         image = vision.Image(content=content)
         response = client.document_text_detection(image=image)
@@ -129,7 +133,7 @@ def extract_signature(file_name):
 # Find the contours in the binary image
     contours, _ = cv2.findContours(
         binary_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
+    print("Number of contours found: ", len(contours))
 # Find the largest contour, which should be the signature
     largest_contour = max(contours, key=cv2.contourArea)
 
@@ -142,7 +146,10 @@ def extract_signature(file_name):
     signature = cv2.bitwise_and(image, image, mask=mask)
     print("Signature extracted successfully")
     print(file_name)
-    cv2.imwrite('pre_signature.jpg', signature)
+    file_name = file_name.split('/')[-1]
+    fileN = '/Users/sohamsattigeri/Soham/College/EDI/fetch-withdrawal-slips/signature/' + file_name
+    cv2.imwrite(fileN, signature)
+    return fileN
 
 
 def extract_account_number():
